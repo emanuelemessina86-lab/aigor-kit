@@ -21,8 +21,14 @@
   decisione resta a chi usa il profilo, qui si toglie solo la possibilità che
   passi inosservata.
 
-  Tutto il resto: "defer" - il normale sistema di permessi decide, questo
-  hook non interferisce. Qualsiasi errore imprevisto: "defer" comunque - un
+  Tutto il resto: NON STAMPARE NULLA ed uscire con codice 0 - è così che si
+  dice "non interferire, decida il normale sistema di permessi" (verificato
+  contro la guida integrata dell'estensione: hookSpecificOutput.permissionDecision
+  accetta SOLO "allow"/"deny"/"ask" - "defer" non è un valore valido. Un bug
+  trovato sul campo il 06/09/2026: con "defer" il tool restava bloccato per
+  sempre nell'estensione VS Code, anche se un test da riga di comando via
+  execSync non lo faceva emergere perché non passa dal parsing vero della
+  decisione). Qualsiasi errore imprevisto: stessa cosa, non stampare nulla - un
   bug qui non deve MAI bloccare il lavoro normale.
 */
 
@@ -30,6 +36,10 @@ function rispondi(decisione, motivo) {
   const out = { hookSpecificOutput: { hookEventName: 'PreToolUse', permissionDecision: decisione } };
   if (motivo) out.hookSpecificOutput.permissionDecisionReason = motivo;
   process.stdout.write(JSON.stringify(out));
+  process.exit(0);
+}
+
+function nonInterferire() {
   process.exit(0);
 }
 
@@ -76,7 +86,7 @@ function main() {
     }
   }
 
-  rispondi('defer');
+  nonInterferire();
 }
 
 try {
@@ -84,5 +94,5 @@ try {
 } catch (e) {
   // Qualunque errore imprevisto (JSON malformato, campo mancante...):
   // non bloccare mai il lavoro normale.
-  rispondi('defer');
+  nonInterferire();
 }

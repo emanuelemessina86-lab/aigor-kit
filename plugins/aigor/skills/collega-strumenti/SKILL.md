@@ -1,5 +1,5 @@
 ---
-name: aigor-collega-strumenti
+name: collega-strumenti
 description: Mappa di cosa AIGor sa già fare senza permessi e cosa richiede di collegare un account/strumento (Gmail, Google Drive/Sheets/Docs, Slack, Asana), con i passi per farlo. Usare quando la persona chiede "posso leggere un Google Sheet?", "come collego Gmail?", "perché non riesci a mandare l'email/leggere Slack?", o durante l'intervista di primo avvio se ha indicato strumenti da collegare.
 user-invocable: true
 ---

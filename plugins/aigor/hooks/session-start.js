@@ -9,7 +9,7 @@
   Due casi:
   1. Non esiste ancora `.aigor/config.md` nella cartella di lavoro corrente
      (o esiste ma è ancora il template, marcato [DA COMPILARE]): iniettato
-     solo un promemoria che dice di avviare la skill "aigor-avvio" prima di
+     solo un promemoria che dice di avviare la skill "aigor:avvio" prima di
      procedere con richieste di lavoro normali — l'intervista stessa scrive
      poi config.md.
   2. `.aigor/config.md` esiste ed è compilato: iniettati i file di metodo/ +
@@ -65,7 +65,7 @@ function main() {
   if (nonConfigurato) {
     return esci(
       'AIGor: nessuna configurazione trovata in questo progetto (.aigor/config.md mancante o incompleto). ' +
-      'Prima di procedere con richieste di lavoro normali, invoca la skill "aigor-avvio" e segui l\'intervista ' +
+      'Prima di procedere con richieste di lavoro normali, invoca la skill "aigor:avvio" e segui l\'intervista ' +
       'descritta li (una domanda alla volta) per scrivere .aigor/config.md in questa cartella di lavoro.'
     );
   }

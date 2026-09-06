@@ -32,7 +32,7 @@ questa forma" più sotto per cosa cambia e perché.
 | Video: riassunto da sottotitoli | In parte — spesso funziona senza collegare nulla |
 | Video: riassunto da audio/fotogrammi, editing avanzato Sheet/Doc, integrazioni tipo Shopify/Klaviyo | No, non incluso in questo kit — richiede software extra, oggi si chiede caso per caso |
 
-Dettaglio e passi esatti: skill `aigor-collega-strumenti` (interna, la spiega
+Dettaglio e passi esatti: skill `aigor:collega-strumenti` (interna, la spiega
 AIGor stesso quando serve — non un documento a parte).
 
 ## Struttura
@@ -90,7 +90,7 @@ memoria proattivamente, il nome AIGor — vedi `plugins/aigor/metodo/`.
   preparare due consegne, mai verificate end-to-end).
 - Le funzionalità "oltre le basi" (video da audio/fotogrammi, ecc.) restano un
   puntatore verso Emanuele, non pacchettizzate — scelta deliberata per non
-  appesantire l'installazione base (vedi skill `aigor-collega-strumenti`).
+  appesantire l'installazione base (vedi skill `aigor:collega-strumenti`).
 - Repo pubblico deciso il 06/09/2026: contiene solo metodo generico, nessun dato
   personale — verificare comunque prima di ogni push che non sia scivolato
   dentro nulla di specifico.

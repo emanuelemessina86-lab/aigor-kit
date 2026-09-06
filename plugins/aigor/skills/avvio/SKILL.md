@@ -1,5 +1,5 @@
 ---
-name: aigor-avvio
+name: avvio
 description: Intervista di primo avvio di AIGor — quando manca o è incompleto .aigor/config.md nella cartella di lavoro corrente (segnalato dall'hook SessionStart), o quando la persona chiede esplicitamente di rifare/aggiornare la configurazione ("ricomincia l'intervista", "cambia la mia configurazione AIGor"). Fa domande una alla volta, in linguaggio semplice, e scrive .aigor/config.md.
 user-invocable: true
 ---
@@ -33,7 +33,7 @@ persona nuova che gli chiede come lavora.
    - **quali strumenti userà con AIGor**: email (Gmail?), fogli/documenti Google
      (Drive/Sheets/Docs/Slides?), Slack, Asana, altro — non serve che siano già
      collegati, basta sapere cosa serve. Annotare la lista: la skill
-     `aigor-collega-strumenti` la userà per la guida passo-passo.
+     `aigor:collega-strumenti` la userà per la guida passo-passo.
    - **quali sue azioni toccano soldi, invii esterni o dati sensibili** — serve a
      capire se questa persona ha bisogno di soglie di conferma più strette del
      principio generale (es. chi emette fatture o autorizza pagamenti). Se sì,
@@ -55,7 +55,7 @@ persona nuova che gli chiede come lavora.
    - Categorie extra sempre-conferma: (se nessuna, scrivere "nessuna oltre al principio generale")
    ```
 6. **Se ha indicato strumenti da collegare**, proporre subito di passare alla
-   skill `aigor-collega-strumenti` per la guida — non obbligare, è una persona
+   skill `aigor:collega-strumenti` per la guida — non obbligare, è una persona
    che magari vuole prima solo provare a chiacchierare.
 7. Da quel momento in poi il profilo è configurato: le sessioni successive non
    ripetono l'intervista (lo verifica da solo l'hook `SessionStart` a ogni
