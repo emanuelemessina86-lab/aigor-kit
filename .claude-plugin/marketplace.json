@@ -1,0 +1,21 @@
+{
+  "name": "aigor-kit",
+  "owner": {
+    "name": "Emanuele Messina"
+  },
+  "metadata": {
+    "description": "AIGor - un profilo Claude Code portabile: metodo (conferme, disciplina di memoria) senza il contesto personale di chi lo ha creato.",
+    "version": "2.0.0"
+  },
+  "plugins": [
+    {
+      "name": "aigor",
+      "description": "Metodo di lavoro con Claude Code (conferme, memoria, autonomia) + guida per collegare Gmail/Google Drive/Slack/Asana. Senza contesto personale: lo costruisce chi lo riceve, con l'intervista di primo avvio.",
+      "version": "2.0.0",
+      "author": {
+        "name": "Emanuele Messina"
+      },
+      "source": "./plugins/aigor"
+    }
+  ]
+}

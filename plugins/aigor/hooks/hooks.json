@@ -1,0 +1,19 @@
+{
+  "description": "AIGor - metodo sempre attivo (SessionStart) + conferme di sicurezza tecniche (PreToolUse)",
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/session-start.js\"", "timeout": 10 }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          { "type": "command", "command": "node \"${CLAUDE_PLUGIN_ROOT}/hooks/autonomia.js\"", "timeout": 10 }
+        ]
+      }
+    ]
+  }
+}
